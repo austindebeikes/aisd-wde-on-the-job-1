@@ -1,0 +1,86 @@
+/* Basic tag styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header {
+    background-color: #ff5252;
+    color: white;
+    padding: 2em;
+    text-align: center;
+}
+
+#about {
+    background-color: #fff;
+    padding: 2em;
+    margin: 1em 0;
+    border-radius: 8px;
+}
+
+#gallery {
+    background-color: #fff;
+    padding: 2em;
+    margin: 1em 0;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.gallery-image {
+    width: 150px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#contact button {
+    background-color: #ff5252;
+    color: white;
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+}
