@@ -46,14 +46,15 @@ header {
     background-color: #fff;
     padding: 2em;
     margin: 1em 0;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1em;
-    justify-content: center;
+    justify-items: center;
 }
 
 .gallery-image {
-    width: 150px;
-    margin: 10px;
+    width: 100%;
+    max-width: 200px;
     border-radius: 8px;
 }
 
@@ -83,4 +84,39 @@ footer {
     text-align: center;
     padding: 1em;
     margin-top: 2em;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    #gallery {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1em;
+    }
+
+    #gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-image {
+        max-width: 100%;
+    }
+
+    #contact form {
+        padding: 1em;
+    }
+
+    footer {
+        padding: 0.5em;
+    }
 }
