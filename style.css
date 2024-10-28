@@ -1,4 +1,4 @@
-/* Basic tag styling */
+/* Basic styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -6,28 +6,22 @@ body {
     padding: 0;
 }
 
-nav {
+/* Navigation Bar */
+.navbar {
     background-color: #333;
     color: white;
-    display: flex;
-    justify-content: center;
-    padding: 1em;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 1em;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.navbar-nav .nav-link {
+    color: white !important;
     font-weight: bold;
 }
 
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Header */
 header {
     background-color: #ff5252;
     color: white;
@@ -35,21 +29,20 @@ header {
     text-align: center;
 }
 
+/* About Section */
 #about {
     background-color: #fff;
     padding: 2em;
-    margin: 1em 0;
+    margin: 1em auto;
     border-radius: 8px;
+    max-width: 800px;
 }
 
+/* Gallery Section */
 #gallery {
     background-color: #fff;
     padding: 2em;
     margin: 1em 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1em;
-    justify-items: center;
 }
 
 .gallery-image {
@@ -58,10 +51,8 @@ header {
     border-radius: 8px;
 }
 
+/* Contact Form */
 #contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
     background-color: #fff;
     padding: 2em;
     border-radius: 8px;
@@ -78,6 +69,11 @@ header {
     cursor: pointer;
 }
 
+#contact button:hover {
+    background-color: #ff6666;
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -86,15 +82,23 @@ footer {
     margin-top: 2em;
 }
 
+/* Bootstrap Utility Classes for Grid Layout */
+.gallery-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1em;
+    justify-items: center;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
+    .navbar-nav {
+        flex-direction: column !important;
         align-items: center;
         gap: 0.5em;
     }
 
-    #gallery {
+    .gallery-row {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 }
@@ -104,7 +108,7 @@ footer {
         padding: 1em;
     }
 
-    #gallery {
+    .gallery-row {
         grid-template-columns: 1fr;
     }
 
